@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Gps</string>
+    <string name="BtnTestConnectionDB">Connection to DB</string>
+    <string name="coordinateText">Coordinates</string>
+    <string name="latitudeText">Latitude</string>
+    <string name="longitudeText">Longitude</string>
+    <string name="timeText">Time</string>
+</resources>
