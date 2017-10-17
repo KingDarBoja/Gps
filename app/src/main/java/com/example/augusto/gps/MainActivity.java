@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvLatitude, tvLongitude, tvTime;
     private LocationManager locationManager;
     private LocationListener listener;
-    String lat,lon,tim;
+    String lat,lon,tim,tim2;
 
 
     @Override
@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
                 DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(getApplicationContext());
                 tim =  dateFormat.format(date) + "\n" + timeFormat.format(date);
-
+                tim2 = dateFormat.format(date) + " " + timeFormat.format(date);
                 tvLatitude.setText(lat);
                 tvLongitude.setText(lon);
                 tvTime.setText(tim);
 
                 String method ="register";
                 BackgroundTask backgroundTask = new BackgroundTask(getBaseContext());
-                backgroundTask.execute(method,lat,lon,tim);
+                backgroundTask.execute(method,lat,lon,tim2);
 
 
             }

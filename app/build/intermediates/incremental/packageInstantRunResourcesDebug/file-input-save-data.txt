@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 10 15:39:04 COT 2017
+#Mon Oct 16 23:33:11 COT 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_action_bar_view_list_nav_layout.xml
@@ -118,7 +118,7 @@
 27.set=ANDROID_RESOURCE
 74.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 226.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
-205.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png
+205.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_action_mode_close_item_material.xml
 128.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color-v23\\abc_tint_default.xml
 73.set=ANDROID_RESOURCE
 7.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -238,14 +238,14 @@
 47.set=ANDROID_RESOURCE
 76.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 51.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
-207.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_action_mode_close_item_material.xml
+207.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png
 93.set=ANDROID_RESOURCE
 204.set=ANDROID_RESOURCE
 9.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 105.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\notification_template_media.xml
 157.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png
 191.set=ANDROID_RESOURCE
-132.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png
+132.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_dialog_title_material.xml
 54.set=ANDROID_RESOURCE
 184.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_media_custom.xml
 158.set=ANDROID_RESOURCE
@@ -271,7 +271,7 @@
 171.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color-v23\\abc_tint_switch_thumb.xml
 38.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 133.set=ANDROID_RESOURCE
-17.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png
+17.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\notification_template_media_custom.xml
 13.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 69.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ic_menu_overflow_material.xml
 44.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v21\\abc_edit_text_material.xml
@@ -303,7 +303,7 @@
 18.set=ANDROID_RESOURCE
 158.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_fade_in.xml
 210.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_action_menu_layout.xml
-133.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_dialog_title_material.xml
+133.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png
 64.set=ANDROID_RESOURCE
 185.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml
 6.set=ANDROID_RESOURCE
@@ -313,7 +313,7 @@
 25.set=ANDROID_RESOURCE
 129.set=ANDROID_RESOURCE
 71.set=ANDROID_RESOURCE
-58.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png
+58.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_popup_menu_header_item_layout.xml
 33.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_list_selector_holo_dark.xml
 64.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 216.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -331,7 +331,7 @@
 172.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_content_include.xml
 39.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 143.set=ANDROID_RESOURCE
-18.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\notification_template_media_custom.xml
+18.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png
 14.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 45.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png
 228.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -373,7 +373,7 @@
 35.set=ANDROID_RESOURCE
 139.set=ANDROID_RESOURCE
 81.set=ANDROID_RESOURCE
-59.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_popup_menu_header_item_layout.xml
+59.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png
 34.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\notification_template_big_media.xml
 65.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 217.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -437,7 +437,7 @@ count=230
 66.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 218.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 87.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png
-10.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\select_dialog_singlechoice_material.xml
+10.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png
 41.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 52.set=ANDROID_RESOURCE
 116.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -457,7 +457,7 @@ count=230
 163.set=ANDROID_RESOURCE
 16.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 20.set=ANDROID_RESOURCE
-47.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png
+47.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png
 22.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-mdpi-v4\\ic_launcher_round.png
 124.set=ANDROID_RESOURCE
 99.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_alert_dialog_material.xml
@@ -517,7 +517,7 @@ count=230
 150.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v21\\notification_action_background.xml
 127.set=ANDROID_RESOURCE
 30.set=ANDROID_RESOURCE
-48.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png
+48.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png
 23.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_text_cursor_material.xml
 134.set=ANDROID_RESOURCE
 206.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -585,7 +585,7 @@ count=230
 76.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_vector_test.xml
 51.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_seekbar_tick_mark_material.xml
 105.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
-9.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png
+9.file=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\select_dialog_singlechoice_material.xml
 157.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
 105.set=ANDROID_RESOURCE
 132.base=D\:\\ProyectoAndroid\\Gps\\app\\build\\intermediates\\res\\resources-debug.ap_
