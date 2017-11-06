@@ -29,6 +29,15 @@
         <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\pre-dexed\debug\classes_ee6cf200267a4f3c30773eabe2c00e79303d384a.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="D:\ProyectoAndroid\Gps\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d825c0ee11caeb961e8f97f770436333fd816073\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Manuel Bojato\.android\build-cache\c405d8b939ffbba577b74d9318175a26db22126d\output\jars\classes.jar"
         jumboMode="false"
@@ -54,6 +63,15 @@
         revision="25.0.2"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\pre-dexed\debug\classes_3e42f5ad49afaff761f8bcccb85d94393a5786a5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ProyectoAndroid\Gps\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75d4387a1b616c341916f7bee71537d38ce5ff18">
+        <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b74e0363a6275f5f1e32351db038b86eb49ec606\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -117,6 +135,15 @@
         revision="25.0.2"
         sha1="27c2b50694c93ff63df27a246c647e41f9a57fbc">
         <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\pre-dexed\debug\mariadb-java-client-1.6.5_8e41cd1e99fd078d4bbe6d9495b230f1d1e405f0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ProyectoAndroid\Gps\app\libs\mariadb-java-client-1.6.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="27c2b50694c93ff63df27a246c647e41f9a57fbc">
+        <dex dex="D:\ProyectoAndroid\Gps\app\build\intermediates\transforms\dex\debug\folders\1000\2\mariadb-java-client-1.6.5_8e41cd1e99fd078d4bbe6d9495b230f1d1e405f0\classes.dex" />
     </item>
     <item
         is-multidex="false"

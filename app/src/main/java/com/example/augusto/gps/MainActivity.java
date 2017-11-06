@@ -50,16 +50,13 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvLatitude, tvLongitude, tvTime, tvBtConnection, tvRpmObd;
     private LocationManager locationManager;
     private LocationListener listener;
-    String lat,lon,tim,tim2,timOut,date;
+    String lat,lon,timOut,rpmValue;
     private String deviceAddress;
-//    private ArrayList<String> deviceStrs = new ArrayList<>();
-//    private ArrayList<String> devices = new ArrayList<>();
     private BluetoothSocket socket;
     private BluetoothAdapter btAdapter = null;
+    private BluetoothDevice device = null;
     private Set<BluetoothDevice> pairedDevices;
-    private String TAG = "ElMensaje";
     Button btnPaired;
-    ListView devicelist;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -88,135 +85,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-//        pairedDevices = btAdapter.getBondedDevices();
-//        if (pairedDevices.size() > 0)
-//        {
-//            // this for instruction add the paired devices into the list
-//            for (BluetoothDevice device : pairedDevices)
-//            {
-//                deviceStrs.add(device.getName() + "\n" + device.getAddress());
-//                devices.add(device.getAddress());
-//            }
-//        }
-//
-//        // Show the list of devices
-//        final AlertDialog.Builder alertDialogBt = new AlertDialog.Builder(this);
-//
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-//                android.R.layout.select_dialog_singlechoice,
-//                deviceStrs.toArray(new String[deviceStrs.size()]));
-//
-//
-//
-//        alertDialogBt.setSingleChoiceItems(adapter, -1, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInt, int which) {
-//                dialogInt.dismiss();
-//                int position = ((AlertDialog) dialogInt).getListView().getCheckedItemPosition();
-//                deviceAddress = devices.get(position);
-//                System.out.println("Device Address: " + deviceAddress);
-//                BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-//                BluetoothDevice device = btAdapter.getRemoteDevice(deviceAddress);
-//                tvBtConnection.setText(deviceAddress);
-//                UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-//                try {
-//                    socket = device.createInsecureRfcommSocketToServiceRecord(uuid);
-//                    socket.connect();
-//                    new EchoOffCommand().run(socket.getInputStream(), socket.getOutputStream());
-//                    new LineFeedOffCommand().run(socket.getInputStream(), socket.getOutputStream());
-//                    new TimeoutCommand(125).run(socket.getInputStream(), socket.getOutputStream());
-//                    new SelectProtocolCommand(ObdProtocols.AUTO).run(socket.getInputStream(), socket.getOutputStream());
-//                    socket.getOutputStream();
-//                } catch (IOException | InterruptedException e) {
-//                    System.out.println("Error connecting the device: " + e.getMessage());
-//                }
-//
-//
-//            }
-//        });
-//
-//        alertDialogBt.setTitle("Choose Bluetooth device");
-//        alertDialogBt.show();
-//
-//        RPMCommand engineRpmCommand = new RPMCommand();
-//        SpeedCommand speedCommand = new SpeedCommand();
-//        while (!Thread.currentThread().isInterrupted())
-//        {
-//            try {
-//                engineRpmCommand.run(socket.getInputStream(), socket.getOutputStream());
-//            } catch (IOException | InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                speedCommand.run(socket.getInputStream(), socket.getOutputStream());
-//            } catch (IOException | InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            // TODO handle commands result
-//            tvRpmObd.setText(engineRpmCommand.getFormattedResult());
-//            Log.d(TAG, "RPM: " + engineRpmCommand.getFormattedResult());
-//            Log.d(TAG, "Speed: " + speedCommand.getFormattedResult());
-//        }
-
-        // Connect to the selected device
-//        btAdapter = BluetoothAdapter.getDefaultAdapter();
-//        BluetoothDevice device = btAdapter.getRemoteDevice(deviceAddress);
-//        UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-//        try {
-//            BluetoothSocket socket = device.createInsecureRfcommSocketToServiceRecord(uuid);
-//            socket.connect();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
         tvLatitude = (TextView) findViewById(R.id.latitudeField);
         tvLongitude = (TextView) findViewById(R.id.longitudeField);
         tvTime = (TextView) findViewById(R.id.timeField);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
-        listener = new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                lat = Double.toString(location.getLatitude());
-                lon = Double.toString(location.getLongitude());
-                Date date = new Date(location.getTime());
-//                DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
-//                DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(getApplicationContext());
-//                tim =  dateFormat.format(date) + "\n" + timeFormat.format(date);
-//                tim2 = dateFormat.format(date) + " " + timeFormat.format(date);
-                SimpleDateFormat outTime = new SimpleDateFormat("MMM dd yyyy HH:mm:ss");
-                timOut = outTime.format(date);
-                tvLatitude.setText(lat);
-                tvLongitude.setText(lon);
-                tvTime.setText(timOut);
-
-                String method ="register";
-//                BackgroundTask backgroundTask = new BackgroundTask(getBaseContext());
-//                backgroundTask.execute(method,lat,lon,timOut);
-
-            }
-
-            @Override
-            public void onStatusChanged(String s, int i, Bundle bundle) {
-
-            }
-
-            @Override
-            public void onProviderEnabled(String s) {
-
-            }
-
-            @Override
-            public void onProviderDisabled(String s) {
-
-                Intent i = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(i);
-            }
-        };
-
-        configure_button();
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
@@ -265,60 +139,83 @@ public class MainActivity extends AppCompatActivity {
         // Show the list of devices
         final AlertDialog.Builder alertDialogBt = new AlertDialog.Builder(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.select_dialog_singlechoice,
-                deviceStrs.toArray(new String[deviceStrs.size()]));
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.select_dialog_singlechoice,
+                    deviceStrs.toArray(new String[deviceStrs.size()]));
 
-        alertDialogBt.setSingleChoiceItems(adapter, -1, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInt, int which) {
-                dialogInt.dismiss();
-                int position = ((AlertDialog) dialogInt).getListView().getCheckedItemPosition();
-                deviceAddress = devices.get(position);
-                System.out.println("Device Address: " + deviceAddress);
-                BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-                BluetoothDevice device = btAdapter.getRemoteDevice(deviceAddress);
-                UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-                try {
-                    socket = device.createInsecureRfcommSocketToServiceRecord(uuid);
-                    socket.connect();
-                    Toast.makeText(getApplicationContext(), "Dispositivo OBD" + "\n" + "Puede proceder con obtener datos", Toast.LENGTH_LONG).show();
-                    new EchoOffCommand().run(socket.getInputStream(), socket.getOutputStream());
-                    new LineFeedOffCommand().run(socket.getInputStream(), socket.getOutputStream());
-                    new TimeoutCommand(125).run(socket.getInputStream(), socket.getOutputStream());
-                    new SelectProtocolCommand(ObdProtocols.AUTO).run(socket.getInputStream(), socket.getOutputStream());
-                    socket.getOutputStream();
-                    OBDDatos();
-                } catch (IOException | InterruptedException e) {
-                    Toast.makeText(getApplicationContext(), "No es un dispositivo OBD" + "\n" + "La conexión se cerrará automaticamente", Toast.LENGTH_LONG).show();
+            alertDialogBt.setSingleChoiceItems(adapter, -1, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInt, int which) {
+                    dialogInt.dismiss();
+                    int position = ((AlertDialog) dialogInt).getListView().getCheckedItemPosition();
+                    deviceAddress = devices.get(position);
+
+                    btAdapter = BluetoothAdapter.getDefaultAdapter();
+                    device = btAdapter.getRemoteDevice(deviceAddress);
+                    UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+
+                    try {
+                        socket = device.createInsecureRfcommSocketToServiceRecord(uuid);
+                        socket.connect();
+                        Toast.makeText(getApplicationContext(), "Dispositivo OBD" + "\n" + "Puede proceder con obtener datos", Toast.LENGTH_LONG).show();
+                        new EchoOffCommand().run(socket.getInputStream(), socket.getOutputStream());
+                        new LineFeedOffCommand().run(socket.getInputStream(), socket.getOutputStream());
+                        new TimeoutCommand(125).run(socket.getInputStream(), socket.getOutputStream());
+                        new SelectProtocolCommand(ObdProtocols.AUTO).run(socket.getInputStream(), socket.getOutputStream());
+                        socket.getOutputStream();
+                    } catch (IOException | InterruptedException e) {
+                        Toast.makeText(getApplicationContext(), "No es un dispositivo OBD" + "\n" + "La conexión se cerrará automaticamente", Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
-        });
+            });
 
-        alertDialogBt.setTitle("Choose Bluetooth device");
-        alertDialogBt.show();
+            alertDialogBt.setTitle("Choose Bluetooth device");
+            alertDialogBt.show();
 
-    }
+            listener = new LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
 
-    public void OBDDatos() {
-        RPMCommand engineRpmCommand = new RPMCommand();
-        SpeedCommand speedCommand = new SpeedCommand();
-        while (!Thread.currentThread().isInterrupted())
-        {
-            try {
-                engineRpmCommand.run(socket.getInputStream(), socket.getOutputStream());
-            } catch (IOException | InterruptedException e) {
-                e.printStackTrace();
-            }
-            try {
-                speedCommand.run(socket.getInputStream(), socket.getOutputStream());
-            } catch (IOException | InterruptedException e) {
-                e.printStackTrace();
-            }
-            // TODO handle commands result
-            tvRpmObd.setText(engineRpmCommand.getFormattedResult());
-            Log.d(TAG, "RPM: " + engineRpmCommand.getFormattedResult());
-            Log.d(TAG, "Speed: " + speedCommand.getFormattedResult());
-        }
+                    lat = Double.toString(location.getLatitude());
+                    lon = Double.toString(location.getLongitude());
+                    Date date = new Date(location.getTime());
+                    SimpleDateFormat outTime = new SimpleDateFormat("MMM dd yyyy HH:mm:ss");
+                    timOut = outTime.format(date);
+                    tvLatitude.setText(lat);
+                    tvLongitude.setText(lon);
+                    tvTime.setText(timOut);
+
+                    RPMCommand engineRpmCommand = new RPMCommand();
+
+                    try {
+                        engineRpmCommand.run(socket.getInputStream(), socket.getOutputStream());
+                        rpmValue = engineRpmCommand.getCalculatedResult();
+                        tvRpmObd.setText(engineRpmCommand.getCalculatedResult());
+                    } catch (IOException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    String method ="register";
+
+                    BackgroundTask backgroundTask = new BackgroundTask(getBaseContext());
+                    backgroundTask.execute(method,lat,lon,timOut,rpmValue);
+
+                }
+
+                @Override
+                public void onStatusChanged(String s, int i, Bundle bundle) { }
+
+                @Override
+                public void onProviderEnabled(String s) { }
+
+                @Override
+                public void onProviderDisabled(String s) {
+
+                    Intent i = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(i);
+                }
+            };
+            configure_button();
+
     }
 }

@@ -6,26 +6,33 @@
     density="hdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1508218802372"
+    timestamp="1509946597300"
     token="-4102039525371043252"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="188" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="31" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
+
+    <artifact
+        location="D:\ProyectoAndroid\Gps\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ProyectoAndroid\Gps\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1508215270160"
+        timestamp="1509946472743"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\ProyectoAndroid\Gps\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -66,7 +73,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1508218746967"
+        timestamp="1509946597300"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\ProyectoAndroid\Gps\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -75,9 +82,5 @@
             location="D:\ProyectoAndroid\Gps\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1508218802372"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
