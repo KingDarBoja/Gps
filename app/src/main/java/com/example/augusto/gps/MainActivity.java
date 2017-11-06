@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
                     btAdapter = BluetoothAdapter.getDefaultAdapter();
                     device = btAdapter.getRemoteDevice(deviceAddress);
+                    tvBtConnection.setText(device.getName());
                     UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
                     try {
