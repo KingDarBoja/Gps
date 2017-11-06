@@ -5,6 +5,6 @@ First of all, you must download the correct JDBC driver connector based on the s
 
 The next step is the bluetooth connection between the App and the vehicle, which I followed this [tutorial](http://blog.lemberg.co.uk/how-guide-obdii-reader-app-development) to make a clickable list of available bluetooth devices close to the app. For the OBD commands, I used the [OBD-II Java API](https://github.com/pires/obd-java-api) to obtain the data (in this case, RPM) from the vehicle. 
 
-Finally, using the **Location Listener** and **Background Task**.
+Finally, using the **Location Listener** and **Background Task**, managed the database connection and write statements to save the gps location (latitude, longitude), timestamp and rpm every five seconds.
 
 This app was designed for the Final Project of Electronic Design - Electronic Engineering - Universidad del Norte (2017).
