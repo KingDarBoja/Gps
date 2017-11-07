@@ -175,7 +175,7 @@ public class BackgroundTask extends AsyncTask<String,Void,Void> {
             statement = conn.createStatement();
             String sql;
 
-            sql = "INSERT INTO " + TABLE_VEHICLE_2 + " (" + KEY_LAT + "," + KEY_LON + "," + KEY_TIME + ") "
+            sql = "INSERT INTO " + TABLE_VEHICLE_2 + " (" + KEY_LAT + "," + KEY_LON + "," + KEY_TIME + "," + KEY_RPM + ") "
                     + "VALUES " + "('" + lat + "', '" + lon + "', '" + time + "', '" + rpm +"')";
             ResultSet rs = statement.executeQuery(sql);
 
